@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div>
+    <h4
+      className="text-center"
+    >
+      Child
+    </h4>
+    <div
+      className="my-2 card"
+    >
+      <div
+        className="card-body"
+        style={
+          Object {
+            "backgroundColor": "#cceeff",
+          }
+        }
+      >
+        <p
+          className="font-weight-bold card-text"
+        >
+          Name :  
+          <span
+            className="font-weight-light"
+          >
+            Erhan Namal
+          </span>
+        </p>
+        <p
+          className="font-weight-bold card-text"
+        >
+          MRN :  
+          <span
+            className="font-weight-light"
+          >
+            test
+          </span>
+        </p>
+        <p
+          className="font-weight-bold card-text"
+        >
+          FIN :  
+          <span
+            className="font-weight-light"
+          >
+            test 2u
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

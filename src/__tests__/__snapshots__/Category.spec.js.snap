@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Category renders correctly 1`] = `
+<div>
+  <div
+    className="list-group"
+    onKeyDown={[Function]}
+  >
+    <span>
+      <div
+        className="list-group-item"
+        data-rb-event-key={null}
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#cceeff",
+          }
+        }
+      >
+        <div>
+          <input
+            name="categoryId"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="ml-2"
+            data-testid="displayName"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            Test
+          </label>
+        </div>
+        <div
+          aria-expanded={null}
+          className="collapse show"
+          style={
+            Object {
+              "backgroundColor": "#dcf9fa",
+              "left": "348px",
+              "position": "absolute",
+              "top": "0px",
+              "width": "450px",
+            }
+          }
+        />
+      </div>
+    </span>
+  </div>
+</div>
+`;

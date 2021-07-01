@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Patient renders correctly 1`] = `
+<div>
+  <div>
+    <h4
+      className="text-center"
+    >
+      Patient
+    </h4>
+    <div
+      className="my-2 card"
+    >
+      <div
+        className="card-body"
+        style={
+          Object {
+            "backgroundColor": "#cceeff",
+          }
+        }
+      >
+        <p
+          className="font-weight-bold card-text"
+        >
+          Name :  
+          <span
+            className="font-weight-light"
+            data-testid="name"
+          >
+            EMMA ESPINOSA
+          </span>
+        </p>
+        <p
+          className="font-weight-bold card-text"
+        >
+          MRN :  
+          <span
+            className="font-weight-light"
+            data-testid="mrn"
+          >
+            test
+          </span>
+        </p>
+        <p
+          className="font-weight-bold card-text"
+        >
+          FIN :   
+          <span
+            className="font-weight-light"
+            data-testid="fin"
+          >
+            test 2u
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
