@@ -1,16 +1,35 @@
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import { Child } from '../components/Child';
 
-it('renders correctly', () => {
-  const patient = {
-    "firstName": "Erhan",
-    "lastName": "Namal",
-    "mrn": "test",
-    "fin": "test 2u"
+describe('components/Child', () => {
+  let wrapper;
+  let props;
+
+  const setup = () => {
+    wrapper = shallow(<Child {...props} />)
   }
 
-  const tree = renderer
-    .create(<Child child={patient} />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  beforeEach(() => {
+    props = {
+      child: {
+        "firstName": "AARAV",
+        "lastName": "ESPINOSA",
+        "mrn": "test",
+        "fin": "test 2u"
+      },
+      loading: false
+    }
+  })
+
+
+  it('should render correctly', () => {
+    setup();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render correctly while loading', () => {
+    props.loading = true
+    setup();
+    expect(wrapper).toMatchSnapshot();
+  })
+})

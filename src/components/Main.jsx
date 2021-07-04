@@ -1,4 +1,4 @@
-import { Container, Row, Col, Dropdown, Button, Alert } from "react-bootstrap"
+import { Container, Row, Col, Dropdown, Button, Alert, Jumbotron } from "react-bootstrap"
 import { Patient } from "./Patient/index"
 import Category from "./Category"
 import AllCategories from "./AllCategories"
@@ -6,8 +6,8 @@ import React, { useRef } from "react"
 import { Child } from "./Child"
 import second from "./second.json"
 import axios from "axios"
-
-class Main extends React.Component {
+import { ApiError} from "./ApiError"
+export class Main extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -26,10 +26,24 @@ class Main extends React.Component {
   }
   getRequest(id) {
     //  need to take id from url
+    /*
+    if (/^\d*[1-9]\d*$/.$id){
+      return (
+        <div>
+          <Jumbotron> 
+            <h1>Enetr a positive value</h1>
+          </Jumbotron>
+        </div>
+      )
+    }*/
+    
     axios
       .get(`http://localhost:8082/result-copy-war/api/patient-results/${id}`)
       .then(response => {
         this.setState({ data: response.data, loading: false })
+        console.log(response)
+        //
+        //
       })
       .catch(err => console.log("getRequest api error ", err))
   }
@@ -96,6 +110,7 @@ class Main extends React.Component {
     }
 
     return (
+    
       <Container>
         <Row>
           <Col>

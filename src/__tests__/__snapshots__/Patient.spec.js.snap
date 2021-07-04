@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Patient renders correctly 1`] = `
+exports[`components/Patient should render correctly 1`] = `
 <div>
   <div>
     <h4
@@ -8,19 +8,19 @@ exports[`Patient renders correctly 1`] = `
     >
       Patient
     </h4>
-    <div
-      className="my-2 card"
+    <Card
+      body={false}
+      className="my-2"
     >
-      <div
-        className="card-body"
+      <CardBody
         style={
           Object {
             "backgroundColor": "#cceeff",
           }
         }
       >
-        <p
-          className="font-weight-bold card-text"
+        <CardText
+          className="font-weight-bold"
         >
           Name :  
           <span
@@ -29,9 +29,9 @@ exports[`Patient renders correctly 1`] = `
           >
             EMMA ESPINOSA
           </span>
-        </p>
-        <p
-          className="font-weight-bold card-text"
+        </CardText>
+        <CardText
+          className="font-weight-bold"
         >
           MRN :  
           <span
@@ -40,9 +40,9 @@ exports[`Patient renders correctly 1`] = `
           >
             test
           </span>
-        </p>
-        <p
-          className="font-weight-bold card-text"
+        </CardText>
+        <CardText
+          className="font-weight-bold"
         >
           FIN :   
           <span
@@ -51,9 +51,15 @@ exports[`Patient renders correctly 1`] = `
           >
             test 2u
           </span>
-        </p>
-      </div>
-    </div>
+        </CardText>
+      </CardBody>
+    </Card>
   </div>
+</div>
+`;
+
+exports[`components/Patient should render correctly while loading 1`] = `
+<div>
+  loading......
 </div>
 `;

@@ -1,57 +1,181 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Category renders correctly 1`] = `
+exports[`components/Category should render correctly when item is empty object 1`] = `
 <div>
-  <div
-    className="list-group"
-    onKeyDown={[Function]}
-  >
-    <span>
-      <div
-        className="list-group-item"
-        data-rb-event-key={null}
-        disabled={false}
-        onClick={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#cceeff",
-          }
-        }
-      >
-        <div>
-          <input
-            name="categoryId"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="ml-2"
-            data-testid="displayName"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-          >
-            Test
-          </label>
-        </div>
+  <div>
+    <div
+      class="list-group"
+    >
+      <span>
         <div
-          aria-expanded={null}
-          className="collapse show"
-          style={
-            Object {
-              "backgroundColor": "#dcf9fa",
-              "left": "348px",
-              "position": "absolute",
-              "top": "0px",
-              "width": "450px",
-            }
-          }
-        />
-      </div>
-    </span>
+          class="list-group-item"
+          style="background-color: rgb(204, 238, 255);"
+        >
+          <div>
+            <input
+              data-name="category-checkbox"
+              name="categoryId"
+              type="checkbox"
+            />
+            <label
+              class="ml-2"
+              data-testid="displayName"
+              style="cursor: pointer;"
+            >
+              Test
+            </label>
+          </div>
+          <div
+            class="collapse show"
+            style="position: absolute; left: 348px; top: 0px; width: 450px; background-color: rgb(220, 249, 250);"
+          >
+            
+            <div
+              class="ml-1 list-group"
+              data-name="item"
+            >
+              <span>
+                <div
+                  class="list-group-item"
+                  style="background-color: rgb(202, 236, 252);"
+                >
+                  <div>
+                    <input
+                      data-name="sub-category-checkbox"
+                      disabled=""
+                      id="2"
+                      name="itemId"
+                      type="checkbox"
+                    />
+                    <label
+                      class="ml-2"
+                      for="2"
+                      style="cursor: pointer;"
+                    >
+                      sub-category 2
+                    </label>
+                    <span>
+                      : 
+                      <b>
+                         
+                        20
+                      </b>
+                    </span>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/Category should renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="list-group"
+    >
+      <span>
+        <div
+          class="list-group-item"
+          style="background-color: rgb(204, 238, 255);"
+        >
+          <div>
+            <input
+              data-name="category-checkbox"
+              name="categoryId"
+              type="checkbox"
+            />
+            <label
+              class="ml-2"
+              data-testid="displayName"
+              style="cursor: pointer;"
+            >
+              Test
+            </label>
+          </div>
+          <div
+            class="collapse show"
+            style="position: absolute; left: 348px; top: 0px; width: 450px; background-color: rgb(220, 249, 250);"
+          >
+            <div
+              class="ml-1 list-group"
+              data-name="item"
+            >
+              <span>
+                <div
+                  class="list-group-item"
+                  style="background-color: rgb(202, 236, 252);"
+                >
+                  <div>
+                    <input
+                      data-name="sub-category-checkbox"
+                      disabled=""
+                      id="1"
+                      name="itemId"
+                      type="checkbox"
+                    />
+                    <label
+                      class="ml-2"
+                      for="1"
+                      style="cursor: pointer;"
+                    >
+                      sub-category 1
+                    </label>
+                    <span>
+                      : 
+                      <b>
+                         
+                        10
+                      </b>
+                    </span>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div
+              class="ml-1 list-group"
+              data-name="item"
+            >
+              <span>
+                <div
+                  class="list-group-item"
+                  style="background-color: rgb(202, 236, 252);"
+                >
+                  <div>
+                    <input
+                      data-name="sub-category-checkbox"
+                      disabled=""
+                      id="2"
+                      name="itemId"
+                      type="checkbox"
+                    />
+                    <label
+                      class="ml-2"
+                      for="2"
+                      style="cursor: pointer;"
+                    >
+                      sub-category 2
+                    </label>
+                    <span>
+                      : 
+                      <b>
+                         
+                        20
+                      </b>
+                    </span>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
   </div>
 </div>
 `;

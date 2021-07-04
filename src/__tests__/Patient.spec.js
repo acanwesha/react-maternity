@@ -1,27 +1,34 @@
-import '@testing-library/jest-dom'
-import * as React from 'react'
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import { Patient } from '../components/Patient';
-import { render, screen } from '@testing-library/react'
-const patient = {
-  "firstName": "EMMA",
-  "lastName": "ESPINOSA",
-  "mrn": "test",
-  "fin": "test 2u"
-}
 
-describe('Patient', () => {
-  it('renders correctly', () => {
-    const tree = renderer
-      .create(<Patient patient={patient} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+describe('components/Patient', () => {
+  let wrapper;
+  let props;
+
+  const setup = () => {
+    wrapper = shallow(<Patient {...props} />)
+  }
+
+  beforeEach(() => {
+    props = {
+      patient: {
+        "firstName": "EMMA",
+        "lastName": "ESPINOSA",
+        "mrn": "test",
+        "fin": "test 2u"
+      },
+      loading: false
+    }
+  })
+
+  it('should render correctly', () => {
+    setup();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it("show props correctly", () => {
-    render(<Patient patient={patient} />)
-    expect(screen.getByTestId('name')).toHaveTextContent(`${patient.firstName} ${patient.lastName}`)
-    expect(screen.getByTestId('mrn')).toHaveTextContent(patient.mrn)
-    expect(screen.getByTestId('fin')).toHaveTextContent(patient.fin)
+  it('should render correctly while loading', () => {
+    props.loading = true
+    setup();
+    expect(wrapper).toMatchSnapshot();
   })
 })

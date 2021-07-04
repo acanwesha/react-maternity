@@ -3,12 +3,15 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import mockAxios from 'jest-mock-axios';
 
-const localStorageMock = {
-    setupFilesAfterEnv : ["<rootDir>/src/setupTests.js"],
-    getItem: jest.fn(),
-    setItem: jest.fn(),
-    removeItem: jest.fn()
+// Setup enzyme
+configure({ adapter: new Adapter() });
 
-  };
-  global.localStorage = localStorageMock;
+
+afterEach(() => {
+  // cleaning up the mess left behind the previous test
+  mockAxios.reset();
+});

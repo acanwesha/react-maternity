@@ -1,11 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`components/AllCategories should render correctly when no categories available 1`] = `
 <div>
   <h3>
     Category
   </h3>
   <p />
   No categories available
+</div>
+`;
+
+exports[`components/AllCategories should renders correctly 1`] = `
+<div>
+  <h3>
+    Category
+  </h3>
+  <p />
+  <Category
+    category={
+      Object {
+        "id": 1,
+      }
+    }
+    categoryIndex={0}
+    finalCategoryArray={Array []}
+    key="0"
+    methods={Object {}}
+    selectedCategory={-1}
+    setSelectedCategory={[Function]}
+  />
+  <Category
+    category={
+      Object {
+        "id": 2,
+      }
+    }
+    categoryIndex={1}
+    finalCategoryArray={Array []}
+    key="1"
+    methods={Object {}}
+    selectedCategory={-1}
+    setSelectedCategory={[Function]}
+  />
 </div>
 `;

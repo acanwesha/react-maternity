@@ -1,99 +1,182 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<div
-  className="container"
->
+exports[`components/Main should render correctly 1`] = `
+<div>
   <div
-    className="row"
+    class="container"
   >
     <div
-      className="col"
-    >
-      <div>
-        loading......
-      </div>
-    </div>
-    <div
-      className="col"
-    >
-      <div>
-        loading......
-      </div>
-    </div>
-  </div>
-  <div
-    className="my-3 row"
-  >
-    <div
-      className="col"
-    >
-      <div />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col"
+      class="row"
     >
       <div
-        className="dropdown"
+        class="col"
       >
-        <button
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="dropdown-toggle btn btn-success"
-          disabled={false}
-          id="dropdown-basic"
-          onClick={[Function]}
-          type="button"
-        >
-          Select Child
-        </button>
-        
+        <div>
+          <div>
+            <h4
+              class="text-center"
+            >
+              Patient
+            </h4>
+            <div
+              class="my-2 card"
+            >
+              <div
+                class="card-body"
+                style="background-color: rgb(204, 238, 255);"
+              >
+                <p
+                  class="font-weight-bold card-text"
+                >
+                  Name :  
+                  <span
+                    class="font-weight-light"
+                    data-testid="name"
+                  >
+                    undefined undefined
+                  </span>
+                </p>
+                <p
+                  class="font-weight-bold card-text"
+                >
+                  MRN :  
+                  <span
+                    class="font-weight-light"
+                    data-testid="mrn"
+                  />
+                </p>
+                <p
+                  class="font-weight-bold card-text"
+                >
+                  FIN :   
+                  <span
+                    class="font-weight-light"
+                    data-testid="fin"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col"
+      >
+        <div>
+          <div>
+            <h4
+              class="text-center"
+            >
+              Child
+            </h4>
+            <div
+              class="my-2 card"
+            >
+              <div
+                class="card-body"
+                style="background-color: rgb(204, 238, 255);"
+              >
+                <p
+                  class="font-weight-bold card-text"
+                >
+                  Name :  
+                  <span
+                    class="font-weight-light"
+                  >
+                    A B
+                  </span>
+                </p>
+                <p
+                  class="font-weight-bold card-text"
+                >
+                  MRN :  
+                  <span
+                    class="font-weight-light"
+                  />
+                </p>
+                <p
+                  class="font-weight-bold card-text"
+                >
+                  FIN :  
+                  <span
+                    class="font-weight-light"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="my-1 row"
-  >
     <div
-      className="col-md-4"
+      class="my-3 row"
+    >
+      <div
+        class="col"
+      >
+        <div
+          class="fade text-center alert alert-primary show"
+          role="alert"
+        >
+          Result was copied on :
+          <b>
+             
+            2021-07-02
+             
+          </b>
+          for  
+          A
+           
+          B
+        </div>
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      
+      
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <div
+          class="dropdown"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="dropdown-toggle btn btn-success"
+            id="dropdown-basic"
+            type="button"
+          >
+            Select Child
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-1 row"
+    >
+      <div
+        class="col-md-4"
+      />
+    </div>
+    <div
+      class="my-1 text-center row"
+    >
+      <div
+        class="col"
+      >
+        <div />
+      </div>
+    </div>
+    <div
+      style="margin-bottom: 200px;"
     />
   </div>
-  <div
-    className="my-1 text-center row"
-  >
-    <div
-      className="col"
-    >
-      <button
-        className="ml-1 btn btn-primary"
-        disabled={false}
-        onClick={[Function]}
-        style={
-          Object {
-            "marginTop": "120px",
-          }
-        }
-        type="button"
-      >
-        Result Copy
-      </button>
-    </div>
-  </div>
-  <div
-    style={
-      Object {
-        "marginBottom": "200px",
-      }
-    }
-  />
 </div>
 `;

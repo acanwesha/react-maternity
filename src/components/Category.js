@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from 'react'
 import { Collapse, ListGroup, ListGroupItem } from "react-bootstrap"
 
 const Category = props => {
@@ -30,7 +30,8 @@ const Category = props => {
               <input
                 type='checkbox'
                 name='categoryId'
-                //  id={category.id}
+                data-name="category-checkbox"
+                // id={category.id}
                 onChange={e => {
                   setSubCheckbox(!subCheckbox)
                   const displayName = category.displayName
@@ -83,6 +84,7 @@ const Category = props => {
                   //  if we unselect the main category then also need to unselect the sub categories
                   if (!subCheckbox) {
                     var checkboxElement = document.getElementById(item.id)
+  
                     if (checkboxElement !== null) {
                       if (checkboxElement.checked === true) {
                         checkboxElement.checked = false
@@ -90,13 +92,18 @@ const Category = props => {
                     }
                   }
                   return (
-                    <ListGroup key={index} className='ml-1'>
+                    <ListGroup 
+                      key={index} 
+                      className='ml-1'
+                      data-name="item"
+                    >
                       <span>
                         <ListGroupItem style={{ backgroundColor: "#caecfc" }}>
-                          <div>
+                          <div> 
                             <input
                               type='checkbox'
                               name='itemId'
+                              data-name="sub-category-checkbox"
                               id={item.id}
                               disabled={!subCheckbox}
                               onChange={e => {
@@ -131,7 +138,7 @@ const Category = props => {
                                   duplicateArray[currentCategoryId].result =
                                     resultArray
                                   setCategoryArray(duplicateArray)
-                                  console.log(
+                                   console.log(
                                     "sub-category added ",
                                     duplicateArray
                                   )
